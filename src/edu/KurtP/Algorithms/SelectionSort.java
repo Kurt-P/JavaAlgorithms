@@ -2,7 +2,7 @@ package edu.KurtP.Algorithms;
 
 /**
  * @author Kurt P
- * @version 1.0.10252012
+ * @version 1.3.10272012
  */
 public class SelectionSort {
 
@@ -15,8 +15,6 @@ public class SelectionSort {
      * @return The sorted array.
      */
     public static int[] sort(int[] inputArray) {
-        //The array variable
-//        int[] array = inputArray;
         array = inputArray;
         int k, j;
 
@@ -32,9 +30,6 @@ public class SelectionSort {
 
             //Swap I with K
             if (k != i) {
-//                int temp = array[i];
-//                array[i] = array[k];
-//                array[k] = temp;
                 swap(i, k);
             }
         }
