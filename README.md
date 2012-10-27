@@ -12,4 +12,8 @@ I need to make a class for each of the following types of sorting algorithms:
 	E. Bucket Sort
 	F. Radix Sort
 
+I am making the methods for the classes static, so that you don't need to 
+instantiate an instance of the class to use the sorting methods. Simular 
+to how the Math library works.
+	
 I then need to pipe the output to a text file.
