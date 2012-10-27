@@ -6,6 +6,8 @@ package edu.KurtP.Algorithms;
  */
 public class SelectionSort {
 
+    private static int[] array;
+
     /**
      * Sorts the inputted array.
      *
@@ -14,7 +16,8 @@ public class SelectionSort {
      */
     public static int[] sort(int[] inputArray) {
         //The array variable
-        int[] array = inputArray;
+//        int[] array = inputArray;
+        array = inputArray;
         int k, j;
 
         //The array will be looped through
@@ -29,13 +32,26 @@ public class SelectionSort {
 
             //Swap I with K
             if (k != i) {
-                int temp = array[i];
-                array[i] = array[k];
-                array[k] = temp;
+//                int temp = array[i];
+//                array[i] = array[k];
+//                array[k] = temp;
+                swap(i, k);
             }
         }
 
         //Return the sorted array.
         return array;
+    }
+
+    /**
+     * Swap two terms in an array.
+     *
+     * @param x
+     * @param y
+     */
+    private static void swap(int x, int y) {
+        int temp = array[x];
+        array[x] = array[y];
+        array[y] = temp;
     }
 }
