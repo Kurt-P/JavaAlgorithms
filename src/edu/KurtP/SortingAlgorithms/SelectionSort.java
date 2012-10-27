@@ -15,6 +15,10 @@ public class SelectionSort {
      * @return The sorted array.
      */
     public static int[] sort(int[] inputArray) {
+        //An array of lenght 1 is sorted.
+        if (inputArray.length == 1) {
+            return inputArray;
+        }
         array = inputArray;
         int k, j;
 

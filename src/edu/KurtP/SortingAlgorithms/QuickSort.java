@@ -19,6 +19,10 @@ public class QuickSort {
         if (inputArray == null || inputArray.length == 0) {
             return null;
         }
+        //An array of lenght 1 is sorted.
+        if (inputArray.length == 1) {
+            return inputArray;
+        }
         
         array = inputArray;
         number = array.length;
