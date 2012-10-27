@@ -1,4 +1,4 @@
-package edu.KurtP.Algorithms;
+package edu.KurtP.SortingAlgorithms;
 
 /**
  * @author Kurt P
