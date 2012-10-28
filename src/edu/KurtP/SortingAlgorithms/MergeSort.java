@@ -72,7 +72,6 @@ public class MergeSort {
         for (int x = low; x <= high; x++) {
             secondaryArray[x] = primaryArray[x];
         }
-        
         while (i <= middle && j <= high) {
             if (secondaryArray[i] <= secondaryArray[j]) {
                 primaryArray[k] = secondaryArray[i];
