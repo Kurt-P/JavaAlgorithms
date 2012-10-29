@@ -6,7 +6,7 @@ package edu.KurtP.SortingAlgorithms;
  */
 public class InsertionSort {
     
-    public static int[] array;
+    private static int[] array;
     
     /**
      * Sorts the array using an insertion sort method of sorting.
@@ -16,6 +16,7 @@ public class InsertionSort {
      */
     public static int[] sort(int[] inputArray) {
         int i, j, key;
+        //int[] array = inputArray;
         array = inputArray;
         
         //J is the deving line of the array
@@ -32,5 +33,18 @@ public class InsertionSort {
         }
         //Return the array
         return array;
+    }
+    
+    @Override
+    public String toString() {
+        String s ="[";
+        for (int m = 0; m < array.length; m++) {
+            if (m == array.length - 1) {
+                s += array[m];
+            }
+            s += array[m] + ",";
+        }
+        s += "]";
+        return s;
     }
 }
