@@ -2,23 +2,28 @@ package edu.KurtP.SortingAlgorithms;
 
 /**
  * @author Kurt P
- * @version 1.2.10282012
+ * @version 1.3.10282012
  */
 public class InsertionSort {
-    
+
     private static int[] array;
-    
+
     /**
      * Sorts the array using an insertion sort method of sorting.
-     * 
-     * @param inputArray
+     *
+     * @param inputArray - The array to be sorted
      * @return The sorted array
      */
     public static int[] sort(int[] inputArray) {
+        //An array of lenght 1 is sorted.
+        if (inputArray.length == 1) {
+            return inputArray;
+        }
+
         int i, j, key;
         //int[] array = inputArray;
         array = inputArray;
-        
+
         //J is the deving line of the array
         for (j = 1; j < array.length; j++) {
             key = array[j];
@@ -33,18 +38,5 @@ public class InsertionSort {
         }
         //Return the array
         return array;
-    }
-    
-    @Override
-    public String toString() {
-        String s ="[";
-        for (int m = 0; m < array.length; m++) {
-            if (m == array.length - 1) {
-                s += array[m];
-            }
-            s += array[m] + ",";
-        }
-        s += "]";
-        return s;
     }
 }

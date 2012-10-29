@@ -2,16 +2,17 @@ package edu.KurtP.SortingAlgorithms;
 
 /**
  * @author Kurt P
- * @version 1.3.10272012
+ * @version 1.4.10272012
  */
 public class QuickSort {
+
     private static int[] array;
     private static int number;
-    
+
     /**
      * Sorts the inputted array
-     * 
-     * @param inputArray
+     *
+     * @param inputArray - The array to be sorted
      * @return the sorted array
      */
     public static int[] sort(int[] inputArray) {
@@ -23,24 +24,24 @@ public class QuickSort {
         if (inputArray.length == 1) {
             return inputArray;
         }
-        
+
         array = inputArray;
         number = array.length;
         quickSort(0, (number - 1));
-        
+
         return array;
     }
-    
+
     /**
      * This is what actually sorts the array.
-     * 
+     *
      * @param low
-     * @param high 
+     * @param high
      */
     private static void quickSort(int low, int high) {
         int i = low, j = high;
         int pivot = array[low + (high - low) / 2];
-        
+
         //Divide the array into two lists.
         while (i <= j) {
             //Work from the left moving right.
@@ -73,12 +74,12 @@ public class QuickSort {
             quickSort(i, high);
         }
     }
-    
+
     /**
      * This method will swap two element in the array.
-     * 
-     * @param x
-     * @param y 
+     *
+     * @param x - The value to be swapped
+     * @param y - The other value to be swapped
      */
     private static void swap(int x, int y) {
         int temp = array[x];

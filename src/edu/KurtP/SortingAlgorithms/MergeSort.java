@@ -2,7 +2,7 @@ package edu.KurtP.SortingAlgorithms;
 
 /**
  * @author Kurt P
- * @version 1.2.10272012
+ * @version 1.3.10272012
  */
 public class MergeSort {
     /*
@@ -11,15 +11,15 @@ public class MergeSort {
      * a size of that equal to that of the primary array. They should always be 
      * the same size.
      */
+
     private static int[] primaryArray, secondaryArray;
-    
     //We need the size of the primary array, to construct the secondary array.
     private static int primaryArraySize;
-    
+
     /**
-     * This method will call the other methods that will handle the sorting of 
+     * This method will call the other methods that will handle the sorting of
      * the input array. It will then return the sorted array.
-     * 
+     *
      * @param inputArray
      * @return the sorted array
      */
@@ -36,16 +36,16 @@ public class MergeSort {
         primaryArraySize = primaryArray.length;
         secondaryArray = new int[primaryArraySize];
         mergeSort(0, primaryArraySize - 1);
-        
+
         return primaryArray;
     }
-    
+
     /**
-     * Merge sort with keep splitting the array up, until it is sorted. Then it 
+     * Merge sort with keep splitting the array up, until it is sorted. Then it
      * will merge the sub arrays together.
-     * 
+     *
      * @param low
-     * @param high 
+     * @param high
      */
     private static void mergeSort(int low, int high) {
         if (low < high) {
@@ -55,20 +55,20 @@ public class MergeSort {
             merge(low, middle, high);
         }
     }
-    
+
     /**
-     * The merge method will merge all the sorted sub arrays, that were split 
-     * up during the mergeSort() into a single array.
-     * 
+     * The merge method will merge all the sorted sub arrays, that were split up
+     * during the mergeSort() into a single array.
+     *
      * @param low
      * @param middle
-     * @param high 
+     * @param high
      */
     private static void merge(int low, int middle, int high) {
         int i = low;
         int j = middle + 1;
         int k = low;
-        
+
         for (int x = low; x <= high; x++) {
             secondaryArray[x] = primaryArray[x];
         }
