@@ -2,11 +2,17 @@ package edu.KurtP.SortingAlgorithms;
 
 /**
  * @author Kurt P
- * @version 0.0.10302012
+ * @version 1.3.10302012
  */
 public class RadixSort {
-    
-    public static int[] sort(int [] inputArray) {
+
+    /**
+     * The sort method for radix sort
+     *
+     * @param inputArray - The array to be sorted.
+     * @return a sorted array
+     */
+    public static int[] sort(int[] inputArray) {
         //Can't sort an empty array
         if (inputArray == null || inputArray.length == 0) {
             return null;
@@ -16,10 +22,28 @@ public class RadixSort {
             return inputArray;
         }
         int[] array = inputArray;
-        int key;
-        while (key > 0) {
+        int someKey = largest(array);
+        while (someKey > 0) {
             BucketSort.sort(array);
+            someKey--;
         }
         return array;
+    }
+
+    /**
+     * Gets the longest element and returns its length .
+     *
+     * @param array
+     * @return
+     */
+    private static int largest(int[] array) {
+        int max = 0;
+        for (int i : array) {
+            int l = String.valueOf(array[i]).length();
+            if (l > max) {
+                max = l;
+            }
+        }
+        return max;
     }
 }

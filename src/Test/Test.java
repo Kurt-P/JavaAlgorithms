@@ -4,6 +4,7 @@ import edu.KurtP.SortingAlgorithms.BucketSort;
 import edu.KurtP.SortingAlgorithms.InsertionSort;
 import edu.KurtP.SortingAlgorithms.MergeSort;
 import edu.KurtP.SortingAlgorithms.QuickSort;
+import edu.KurtP.SortingAlgorithms.RadixSort;
 import edu.KurtP.SortingAlgorithms.SelectionSort;
 import java.util.Arrays;
 import java.util.Random;
@@ -32,7 +33,7 @@ public class Test {
         SelectionSort.sort(array);
         System.out.printf("%s %d\n", eTime, (System.currentTimeMillis() - time));
         System.out.printf("%s %s\n\n", sorted, Arrays.toString(array));
-        //End of the selection sort block
+        //End of the Selectionsort block
         
         //Start of the QuickSrot block - 2
         System.out.println("Quick Sort");
@@ -44,7 +45,7 @@ public class Test {
         QuickSort.sort(array);
         System.out.printf("%s %d\n", eTime, (System.currentTimeMillis() - time));
         System.out.printf("%s %s\n\n", sorted, Arrays.toString(array));
-        //End of Quick sort block
+        //End of Quicksort block
         
         //Start of MergeSort block - 3
         System.out.println("Merge Sort");
@@ -81,5 +82,17 @@ public class Test {
         System.out.printf("%s %d\n", eTime, (System.currentTimeMillis() - time));
         System.out.printf("%s %s\n\n", sorted, Arrays.toString(array));
         //End of InsertionSort block
+        
+        //Start of RadixSort block - 5
+        System.out.println("Radix Sort");
+        for (int i = 0; i < array.length; i++) {
+            array[i] = r.nextInt(1001);
+        }
+        System.out.printf("%s %s\n", starting, Arrays.toString(array));
+        time = System.currentTimeMillis();
+        RadixSort.sort(array);
+        System.out.printf("%s %d\n", eTime, (System.currentTimeMillis() - time));
+        System.out.printf("%s %s\n\n", sorted, Arrays.toString(array));
+        //End of RadixSort block
     }
 }
